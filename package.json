@@ -1,0 +1,14 @@
+{
+  "scripts": {
+    "test:all": "jest",
+    "test:challenge:1": "jest -t 'Challenge 1'",
+    "test:challenge:2": "jest -t 'Challenge 2'",
+    "test:challenge:3": "jest -t 'Challenge 3'",
+    "test:challenge:4": "jest -t 'Challenge 4'",
+    "test:challenge:5": "jest -t 'Challenge 5'",
+    "test:challenge:6": "jest -t 'Challenge 6'"
+  },
+  "devDependencies": {
+    "jest": "^24.9.0"
+  }
+}
