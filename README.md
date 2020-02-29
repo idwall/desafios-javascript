@@ -2,6 +2,8 @@
 
 # Desafio técnico | Javascript Software Developer
 
+> Saiba mais sobre a [vaga](https://apply.workable.com/idwall/j/68038BF4A5/)
+
 ## Como funciona o desafio
 
 Para nossa primeira etapa de avaliação técnica, temos um teste composto de 6 pequenos desafios, onde queremos avaliar conhecimentos sobre lógica de programação e Javascript básico. Os códigos podem ser encontrados no diretório **challenges** e devem ser resolvidos de acordo com seus respectivos enunciados.
