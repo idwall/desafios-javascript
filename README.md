@@ -1,4 +1,4 @@
-![Desafio técnico | Javascript Software Developer](https://repository-images.githubusercontent.com/243810177/50634780-5b01-11ea-8e1f-4be71c253c81)
+![Desafio técnico | Javascript Software Developer](https://user-images.githubusercontent.com/61591316/75612456-78f83b00-5b1b-11ea-9bf8-211c6f6f6bf1.png)
 
 ## Informações úteis
 
