@@ -1,6 +1,6 @@
 ![](https://idwall.co/img/logo.svg)
 
-# Desáfio técnico | Javascript Software Developer
+# Desafio técnico | Javascript Software Developer
 
 ## Como funciona o desafio
 
