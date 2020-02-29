@@ -2,9 +2,10 @@
 
 # Desafio técnico | Javascript Software Developer
 
-> Saiba mais sobre a [vaga](https://apply.workable.com/idwall/j/68038BF4A5/)
->
-> Saiba mais sobre a [idwall](https://idwall.co/sobre-nos/)
+## Informações úteis
+
+- Saiba um pouco mais sobre nossa **[vaga](https://apply.workable.com/idwall/j/68038BF4A5/)**
+- Conheça mais sobre a **[idwall](https://idwall.co/sobre-nos/)**
 
 ## Como funciona o desafio
 
