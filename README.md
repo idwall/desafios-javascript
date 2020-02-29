@@ -1,6 +1,4 @@
-![](https://idwall.co/img/logo.svg)
-
-# Desafio técnico | Javascript Software Developer
+![Desafio técnico | Javascript Software Developer](https://repository-images.githubusercontent.com/243810177/50634780-5b01-11ea-8e1f-4be71c253c81)
 
 ## Informações úteis
 
