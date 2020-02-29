@@ -17,8 +17,6 @@
  * a > b sempre.
  */
 
-const MDC = (a, b) => {
-  // escreva o corpo desta função
-}
+const MDC = (a, b) => {}
 
 module.exports = MDC

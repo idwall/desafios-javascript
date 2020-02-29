@@ -52,8 +52,6 @@
  *  }
  */
 
-const normalizeData = unormalized => {
-  // escreva o corpo desta função
-}
+const normalizeData = unormalized => {}
 
 module.exports = normalizeData

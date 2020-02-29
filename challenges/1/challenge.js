@@ -9,8 +9,6 @@
  *
  */
 
-const sumArguments = arr => {
-  // escreva o corpo desta função
-}
+const sumArguments = arr => {}
 
 module.exports = sumArguments

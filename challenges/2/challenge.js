@@ -18,8 +18,6 @@
 
 const isPrime = require('../../utils/isPrime')
 
-const sumPrimes = n => {
-  // escreva o corpo desta função
-}
+const sumPrimes = n => {}
 
 module.exports = sumPrimes

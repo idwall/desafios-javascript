@@ -26,8 +26,6 @@
  * }
  */
 
-const extractSize = htmlTemplate => {
-  // escreva o corpo desta função
-}
+const extractSize = htmlTemplate => {}
 
 module.exports = extractSize
