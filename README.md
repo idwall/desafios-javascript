@@ -7,7 +7,7 @@
 
 ## Como funciona o desafio
 
-Para nossa primeira etapa de avaliação técnica, temos um teste composto de 6 pequenos desafios, onde queremos avaliar conhecimentos sobre lógica de programação e Javascript básico. Os códigos podem ser encontrados no diretório **challenges** e devem ser resolvidos de acordo com seus respectivos enunciados.
+Para nossa primeira etapa de avaliação técnica, temos um teste composto de 6 pequenos desafios, onde queremos avaliar conhecimentos sobre lógica de programação e Javascript básico. Os códigos podem ser encontrados no diretório **[challenges](https://github.com/idwall/desafios-javascript/tree/master/challenges)** e devem ser resolvidos de acordo com seus respectivos enunciados.
 
 Para te auxiliar na resolução dos problemas, deixamos a suíte de testes automatizados já funcionando. Caso você opte por rodar os testes, deve seguir o seguinte fluxo:
 
