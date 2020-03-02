@@ -24,7 +24,7 @@ npm run test:challenge:1
 
 ## Como entregar o desafio
 
-O desafio deve ser entregue no prazo máximo de **4 dias**, considerando que o prazo começa um dia depois do momento em que lhe enviamos as instruções. A resolução deve ser enviada para o e-mail **chapter.javascript@idwall.co**, em formato **.zip**. Seria ótimo se também fosse enviada uma breve descrição explicando como você resolveu os desafios.
+O desafio deve ser entregue no prazo máximo de **4 dias**, considerando que o prazo começa um dia depois do momento em que lhe enviamos as instruções. Desenvolva o teste em um repositório github e envie o link para o e-mail **chapter.javascript@idwall.co** com o assunto `Desafio Tecnico - Nome da candidata(o)`. Seria ótimo se também fosse enviada uma breve descrição explicando como você resolveu os desafios.
 
 Caso tenha qualquer problema e não puder iniciar o desafio no prazo estabelecido, ou tiver dúvidas e dificuldades durante o processo, ou mesmo precisar de um feedback sobre sua avaliação, nos envie um e-mail e estaremos prontos para ajudar :)
 
