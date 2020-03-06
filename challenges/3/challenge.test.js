@@ -20,4 +20,9 @@ describe('Challenge 3', () => {
   [INPUT]: 1380, 1472`, () => {
     expect(MDC(1380, 1472)).toBe(92)
   })
+  
+  test(`It should return 13
+  [INPUT]: 13, 0`, () => {
+    expect(MDC(13, 0)).toBe(13)
+  })
 })
