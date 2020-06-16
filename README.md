@@ -1,9 +1,7 @@
 ![Desafio técnico | Javascript Software Developer](https://user-images.githubusercontent.com/61591316/75612456-78f83b00-5b1b-11ea-9bf8-211c6f6f6bf1.png)
 
 ## Informações úteis
-
-- Saiba um pouco mais sobre nossa **[vaga](https://apply.workable.com/idwall/j/68038BF4A5/)**
-- Conheça mais sobre a **[idwall](https://idwall.co/sobre-nos/)**
+- Conheça mais sobre a **[idwall](https://idwall.co/vagas/)**
 
 ## Como funciona o desafio
 
