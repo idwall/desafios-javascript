@@ -1,23 +1,27 @@
-const MDC = require('./challenge')
+const doRequest = require('./challenge')
+const api = require('../../utils/api')
+
+jest.mock('../../utils/stateHandlers', () => {
+  return {
+    setError: jest.fn(() => null),
+    setLoading: jest.fn(() => null),
+    setData: jest.fn(() => null),
+  }
+})
+
+const mockStateHandlers = require('../../utils/stateHandlers')
 
 describe('Challenge 3', () => {
-  test(`It should return 6
-  [INPUT]: 12, 18`, () => {
-    expect(MDC(12, 18)).toBe(6)
-  })
+  test(`It should execute api call and set all states correctly`, async () => {
+    await doRequest()
+    expect(mockStateHandlers.setLoading).toBeCalledWith(true)
+    expect(mockStateHandlers.setError).toBeCalledWith(false)
 
-  test(`It should return 1
-  [INPUT]: 20, 33`, () => {
-    expect(MDC(20, 33)).toBe(1)
-  })
+    const response = await api()
 
-  test(`It should return 23
-  [INPUT]: 368, 391`, () => {
-    expect(MDC(368, 391)).toBe(23)
-  })
+    expect(mockStateHandlers.setData).toBeCalledWith(response)
 
-  test(`It should return 92
-  [INPUT]: 1380, 1472`, () => {
-    expect(MDC(1380, 1472)).toBe(92)
+    expect(mockStateHandlers.setLoading).lastCalledWith(false)
+    expect(mockStateHandlers.setError).not.toBeCalledWith(true)
   })
 })

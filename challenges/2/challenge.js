@@ -1,23 +1,57 @@
 /*
- * Números primos
+ * Normalização de estruturas
  */
 
 /* ENUNCIADO
  *
- * Você deve fazer um programa que soma o valor de todos
- * os números primos existentes de 1 a n, onde n é dado como
- * parâmetro.
- *
- * Para isso você deve usar a função já escrita de verificação
- * de primalidade.
- *
- * Exemplo:
- * sumPrimes(15) deve retornar 41
+ * Você deve escrever uma função que realize a
+ * normalização da estrutura representada pela variável input de
+ * forma que o retorno seja compatível com a variável output
  *
  */
 
-const isPrime = require('../../utils/isPrime')
+/*
+ * [INPUT] Object
+ * {
+ *   "id": "6197b77e-3942-11ea-a137-2e728ce88125",
+ *   "user": {
+ *     "id": "6197ba94",
+ *     "name": "Laura"
+ *   },
+ *   "reports": [
+ *     {
+ *       "id": "51ddf1a9",
+ *       "result": {
+ *         "document": "356.4325-10",
+ *         "status": "em análise",
+ *       }
+ *     }
+ *   ]
+ * }
+ *
+ * [OUTPUT] Object
+ *  {
+ *   "results": {
+ *     "6197b77e-3942-11ea-a137-2e728ce88125": {
+ *       id: "6197b77e-3942-11ea-a137-2e728ce88125",
+ *       user: "6197ba94",
+ *       reports: ["51ddf1a9"]
+ *     }
+ *   },
+ *   "users": {
+ *     "6197ba94": { "id": "6197ba94", "name": "Laura" }
+ *   },
+ *   "reports": {
+ *     "51ddf1a9": {
+ *        "id": "51ddf1a9",
+ *        "user": "6197ba94",
+ *        "document": "356.4325-10",
+ *        "status": "em análise",
+ *      }
+ *    }
+ *  }
+ */
 
-const sumPrimes = n => {}
+const normalizeData = unormalized => {}
 
-module.exports = sumPrimes
+module.exports = normalizeData

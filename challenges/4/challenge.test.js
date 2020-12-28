@@ -1,100 +1,41 @@
-const normalizeData = require('./challenge')
+const extractSize = require('./challenge')
 
 describe('Challenge 4', () => {
-  test(`It should execute normalize data with given data as example`, async () => {
-    const unormalized = {
-      id: '6197b77e-3942-11ea-a137-2e728ce88125',
-      user: {
-        id: '6197ba94',
-        name: 'Laura',
-      },
-      reports: [
-        {
-          id: '51ddf1a9',
-          result: {
-            document: '356.4325-10',
-            status: 'em análise',
-          },
-        },
-      ],
-    }
+  test(`It should return {width: 20, height: 60}
+  [INPUt]: '<div style="height: 20px; width: 60px;"></div>'`, async () => {
+    const htmlTemplate = `<div style="height: 20px; width: 60px;"></div>`
 
-    const normalized = {
-      results: {
-        '6197b77e-3942-11ea-a137-2e728ce88125': {
-          id: '6197b77e-3942-11ea-a137-2e728ce88125',
-          user: '6197ba94',
-          reports: ['51ddf1a9'],
-        },
-      },
-      users: {
-        '6197ba94': { id: '6197ba94', name: 'Laura' },
-      },
-      reports: {
-        '51ddf1a9': {
-          id: '51ddf1a9',
-          user: '6197ba94',
-          document: '356.4325-10',
-          status: 'em análise',
-        },
-      },
-    }
-
-    expect(normalizeData(unormalized)).toEqual(normalized)
+    expect(extractSize(htmlTemplate)).toEqual({ height: 20, width: 60 })
   })
 
-  test(`It should execute normalize data with two results`, async () => {
-    const unormalized = {
-      id: '3942-2e728ce88125-11ea-a137-a98dy12uhd',
-      user: {
-        id: '90013adv',
-        name: 'Milson',
-      },
-      reports: [
-        {
-          id: '512dg5f1a9',
-          result: {
-            document: '356.4325-10',
-            status: 'em análise',
-          },
-        },
-        {
-          id: '01223saf',
-          result: {
-            document: '123.09312-99',
-            status: 'concluido',
-          },
-        },
-      ],
-    }
+  test(`It should return {width: 120, height: 20}
+  [INPUT]: '<div style="background-color: red;"> <img style="width: 120px; height: 20%" /></div>'`, async () => {
+    const htmlTemplate = `<div style="background-color: red;"> <img style="width: 120px; height: 20%" /></div>`
 
-    const normalized = {
-      results: {
-        '3942-2e728ce88125-11ea-a137-a98dy12uhd': {
-          id: '3942-2e728ce88125-11ea-a137-a98dy12uhd',
-          user: '90013adv',
-          reports: ['512dg5f1a9', '01223saf'],
-        },
-      },
-      users: {
-        '90013adv': { id: '90013adv', name: 'Milson' },
-      },
-      reports: {
-        '512dg5f1a9': {
-          id: '512dg5f1a9',
-          user: '90013adv',
-          document: '356.4325-10',
-          status: 'em análise',
-        },
-        '01223saf': {
-          id: '01223saf',
-          user: '90013adv',
-          document: '123.09312-99',
-          status: 'concluido',
-        },
-      },
-    }
+    expect(extractSize(htmlTemplate)).toEqual({ width: 120, height: 20 })
+  })
 
-    expect(normalizeData(unormalized)).toEqual(normalized)
+  test(`It should return {width: 442, height: 911}
+  [INPUT]: \`
+    <div style="width: 442px;">
+      <span style="height: 911px;"></span>
+      <span style="height: 121px;"></span>
+    </div>
+  \``, async () => {
+    const htmlTemplate = `
+    <div style="width: 442px;">
+      <span style="height: 911px;"></span>
+      <span style="height: 121px;"></span>
+    </div>
+    `
+
+    expect(extractSize(htmlTemplate)).toEqual({ width: 442, height: 911 })
+  })
+
+  test(`It should return {width: 0, height: 0}
+  [INPUT]: ''`, async () => {
+    const htmlTemplate = ``
+
+    expect(extractSize(htmlTemplate)).toEqual({ width: 0, height: 0 })
   })
 })

@@ -1,57 +1,33 @@
 /*
- * Normalização de estruturas
+ * Regex
  */
 
 /* ENUNCIADO
  *
- * Você deve escrever uma função que realize a
- * normalização da estrutura representada pela variável input de
- * forma que o retorno seja compatível com a variável output
+ * Escreva uma função que busque no texto os valores de "height" e "width"
+ * e retorne um objeto { "height": x, "width": y } contendo esses valores ignorando sua medida (px, %, em).
  *
- */
-
-/*
- * [INPUT] Object
+ * Ex:1
+ * [INPUT]
+ * "<div style="height: 20px; width: 60px;">"
+ * [OUTPUT]
  * {
- *   "id": "6197b77e-3942-11ea-a137-2e728ce88125",
- *   "user": {
- *     "id": "6197ba94",
- *     "name": "Laura"
- *   },
- *   "reports": [
- *     {
- *       "id": "51ddf1a9",
- *       "result": {
- *         "document": "356.4325-10",
- *         "status": "em análise",
- *       }
- *     }
- *   ]
+ *   height: 20,
+ *   width: 60
  * }
  *
+ * Ex: 2
+ * [INPUT] String
+ * "<div style="background-color: red;"> <img style="width: 120px; height: 20%" /></div>"
  * [OUTPUT] Object
- *  {
- *   "results": {
- *     "6197b77e-3942-11ea-a137-2e728ce88125": {
- *       id: "6197b77e-3942-11ea-a137-2e728ce88125",
- *       user: "6197ba94",
- *       reports: ["51ddf1a9"]
- *     }
- *   },
- *   "users": {
- *     "6197ba94": { "id": "6197ba94", "name": "Laura" }
- *   },
- *   "reports": {
- *     "51ddf1a9": {
- *        "id": "51ddf1a9",
- *        "user": "6197ba94",
- *        "document": "356.4325-10",
- *        "status": "em análise",
- *      }
- *    }
- *  }
+ * {
+ *   width: 120,
+ *   height: 20
+ * }
  */
 
-const normalizeData = unormalized => {}
+const extractSize = htmlTemplate => {}
 
-module.exports = normalizeData
+module.exports = extractSize;
+
+
