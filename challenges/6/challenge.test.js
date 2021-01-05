@@ -1,41 +1,19 @@
-const extractSize = require('./challenge')
+const combinate = require('./challenge')
 
 describe('Challenge 6', () => {
-  test(`It should return {width: 20, height: 60}
-  [INPUt]: '<div style="height: 20px; width: 60px;"></div>'`, async () => {
-    const htmlTemplate = `<div style="height: 20px; width: 60px;"></div>`
+  it('It should return all combinations', () => {
+    expect(combinate([1], 4)).toEqual([[1, 1, 1, 1]])
 
-    expect(extractSize(htmlTemplate)).toEqual({ height: 20, width: 60 })
-  })
+    expect(combinate([2, 3, 6, 7], 7)).toEqual([[2, 2, 3], [7]])
 
-  test(`It should return {width: 120, height: 20}
-  [INPUT]: '<div style="background-color: red;"> <img style="width: 120px; height: 20%" /></div>'`, async () => {
-    const htmlTemplate = `<div style="background-color: red;"> <img style="width: 120px; height: 20%" /></div>`
+    expect(combinate([2, 3, 5], 8)).toEqual([
+      [2, 2, 2, 2],
+      [2, 3, 3],
+      [3, 5],
+    ])
 
-    expect(extractSize(htmlTemplate)).toEqual({ width: 120, height: 20 })
-  })
+    expect(combinate([2, 5], 3)).toEqual([])
 
-  test(`It should return {width: 442, height: 911}
-  [INPUT]: \`
-    <div style="width: 442px;">
-      <span style="height: 911px;"></span>
-      <span style="height: 121px;"></span>
-    </div>
-  \``, async () => {
-    const htmlTemplate = `
-    <div style="width: 442px;">
-      <span style="height: 911px;"></span>
-      <span style="height: 121px;"></span>
-    </div>
-    `
-
-    expect(extractSize(htmlTemplate)).toEqual({ width: 442, height: 911 })
-  })
-
-  test(`It should return {width: 0, height: 0}
-  [INPUT]: ''`, async () => {
-    const htmlTemplate = ``
-
-    expect(extractSize(htmlTemplate)).toEqual({ width: 0, height: 0 })
+    expect(combinate([], 3)).toEqual([])
   })
 })

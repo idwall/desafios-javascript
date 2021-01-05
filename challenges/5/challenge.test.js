@@ -1,27 +1,47 @@
-const doRequest = require('./challenge')
-const api = require('../../utils/api')
-
-jest.mock('../../utils/stateHandlers', () => {
-  return {
-    setError: jest.fn(() => null),
-    setLoading: jest.fn(() => null),
-    setData: jest.fn(() => null),
-  }
-})
-
-const mockStateHandlers = require('../../utils/stateHandlers')
+const paginate = require('./challenge')
 
 describe('Challenge 5', () => {
-  test(`It should execute api call and set all states correctly`, async () => {
-    await doRequest()
-    expect(mockStateHandlers.setLoading).toBeCalledWith(true)
-    expect(mockStateHandlers.setError).toBeCalledWith(false)
+  let collection
 
-    const response = await api()
+  beforeEach(() => {
+    collection = Array.apply(null, Array(100)).map((_, i) => ({
+      id: i,
+      userId: 1,
+      title: 'ut quo aut ducimus alias',
+      body: 'quam occaecati qui deleniti consectetur',
+    }))
+  })
 
-    expect(mockStateHandlers.setData).toBeCalledWith(response)
+  describe('Default pagination', () => {
+    it('should return 10 items', () => {
+      const results = paginate(collection)
+      expect(results.data.length).to.equal(10)
+    })
 
-    expect(mockStateHandlers.setLoading).lastCalledWith(false)
-    expect(mockStateHandlers.setError).not.toBeCalledWith(true)
+    it('should return current page as 1', () => {
+      const results = paginate(collection)
+      expect(results.currentPage).to.equal(1)
+    })
+
+    it('should throw error if not array', () => {
+      expect(paginate.bind(null, 'string')).to.throw(/Expect array and got string/)
+    })
+
+    it('should return the correct default values', () => {
+      const results = paginate(collection)
+      expect(results.currentPage).to.equal(1)
+      expect(results.perPage).to.equal(10)
+      expect(results.total).to.equal(100)
+      expect(results.totalPages).to.equal(10)
+      expect(results.data).to.eql(collection.slice(0, 10))
+    })
+  })
+
+  it('should return 15 items', () => {
+    const results = paginate(collection, 1, 15)
+    expect(results.currentPage).to.equal(1)
+    expect(results.data.length).to.equal(15)
+    expect(results.perPage).to.equal(15)
+    expect(results.totalPages).to.equal(7)
   })
 })
