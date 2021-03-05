@@ -1,3 +1,4 @@
+const expect = require('chai').expect
 const paginate = require('./challenge')
 
 describe('Challenge 5', () => {

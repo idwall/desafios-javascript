@@ -27,6 +27,6 @@
 
 const posts = require('./posts.json')
 
-const paginate = (pageNumber, itemsPerPage) => {}
+const paginate = (collection = posts, pageNumber = 1, itemsPerPage = 10) => {}
 
 module.exports = paginate
