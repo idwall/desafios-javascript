@@ -9,6 +9,7 @@
     "test:challenge:6": "jest -t 'Challenge 6'"
   },
   "devDependencies": {
-    "jest": "^24.9.0"
+    "chai": "4.3.4",
+    "jest": "24.9.0"
   }
 }
